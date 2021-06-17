@@ -12,95 +12,142 @@ class CadastroPageState extends State<CadastroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Cadastro',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white70,
-            letterSpacing: 8,
+        title: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Text(
+            'Cadastro',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white70,
+              letterSpacing: 8,
+            ),
           ),
         ),
         backgroundColor: Colors.verdeWhats,
       ),
       body: Container(
-        decoration: BoxDecoration(color: Color(0xff075E54)),
-        padding: EdgeInsets.all(16),
-        child: Center(
-            child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(bottom: 32),
-                child: Image.asset(
-                  'assets/images/Logo.png',
-                  width: 200,
-                  height: 150,
-                ),
-              ),
-
-               Padding(
-                padding: EdgeInsets.only(bottom: 8),
-                child: TextField(
-                  //autofocus: true,
-                  keyboardType: TextInputType.emailAddress,
-                  style: TextStyle(fontSize: 20),
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(32, 16, 32, 16),
-                      hintText: "Nome",
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(32))),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 8),
-                child: TextField(
-                  //autofocus: true,
-                  keyboardType: TextInputType.emailAddress,
-                  style: TextStyle(fontSize: 20),
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(32, 16, 32, 16),
-                      hintText: "Telefone",
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(32))),
-                ),
-              ),
-      
-              TextField(
-              
-                obscureText: true,
-                style: TextStyle(fontSize: 20),
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.fromLTRB(32, 16, 32, 16),
-                    hintText: "Senha",
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(32))),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 16, bottom: 10),
-                child: RaisedButton(
-                    child: Text(
-                      "Cadastrar",
-                      style: TextStyle(color: Colors.black, fontSize: 20),
+          decoration: BoxDecoration(color: Colors.lightGreen[100]),
+          width: double.infinity,
+          height: double.infinity,
+          padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+          child: SingleChildScrollView(
+            child: Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 20, 20, 8),
+                    child: TextField(
+                      
+                      keyboardType: TextInputType.name,
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Nome",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
                     ),
-                    color: Colors.orange,
-                    padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32)),
-                    onPressed: () {}),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                    child: TextField(
+                      //autofocus: true,
+                      keyboardType: TextInputType.number,
+                      
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Telefone",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                    child: TextField(
+                      //autofocus: true,
+                    
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Cidade",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                    child: TextField(
+                      obscureText: true,
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Senha",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                    child: TextField(
+                      obscureText: true,
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Confirme sua Senha",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                    child: TextField(
+                      
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
+                          hintText: "Serviços",
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(32))),
+                    ),
+                  ),
+                     Padding(
+                    padding: EdgeInsets.fromLTRB(32, 8, 32, 8),
+                
+                    ),
+                  
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 8, 20, 20),
+                    child: RaisedButton(
+                        child: Text(
+                          "Cadastrar",
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                        ),
+                        color: Colors.yellow[800],
+                        padding: EdgeInsets.fromLTRB(32, 8, 32, 8),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(32)),
+                        onPressed: () {}),
+                  ),
+                ],
               ),
-             
-            ],
+            ),
+          ) 
           ),
-        )),
-      ),
-     
     );
   }
 }

@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                       "Entrar",
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
-                    color: Colors.orange,
+                    color: Colors.yellow,
                     padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(32)),
