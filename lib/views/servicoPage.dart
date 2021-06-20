@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ola_mundo/views/servicoPage.dart';
 
-
-class CadastroPage extends StatefulWidget {
+class ServicoPage extends StatefulWidget{
   @override
-  State<CadastroPage> createState() {
-    return CadastroPageState();
-  }
+  _ServicoPageState createState() => _ServicoPageState();
+  
 }
 
-class CadastroPageState extends State<CadastroPage> {
+class _ServicoPageState extends State<ServicoPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+  return Scaffold(
+            appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.all(30),
           child: Text(
-            'Cadastro',
+            'Serviços',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white70,
@@ -50,66 +47,23 @@ class CadastroPageState extends State<CadastroPage> {
                         keyboardType: TextInputType.name,
                         style: TextStyle(fontSize: 20),
                         decoration: InputDecoration(
-                            contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                            hintText: "Nome",
+                            contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 8),
+                            hintText: "Qual serviço você realiza?",
                             filled: true,
                             fillColor: Colors.white70,
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(32))),
                       ),
                     ),
+                  
                     Padding(
                       padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                      child: TextField(
-                        //autofocus: true,
-                        keyboardType: TextInputType.number,
+                      child: TextFormField(                 
                         style: TextStyle(fontSize: 20),
                         decoration: InputDecoration(
+                            
                             contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                            hintText: "Telefone",
-                            filled: true,
-                            fillColor: Colors.white70,
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(32))),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                      child: TextField(
-                        //autofocus: true,
-
-                        style: TextStyle(fontSize: 20),
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                            hintText: "Cidade",
-                            filled: true,
-                            fillColor: Colors.white70,
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(32))),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(fontSize: 20),
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                            hintText: "Senha",
-                            filled: true,
-                            fillColor: Colors.white70,
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(32))),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                      child: TextField(
-                        obscureText: true,
-                        style: TextStyle(fontSize: 20),
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.fromLTRB(20, 8, 20, 8),
-                            hintText: "Confirme sua Senha",
+                            hintText: "Serviços Cadastrados",
                             filled: true,
                             fillColor: Colors.white70,
                             border: OutlineInputBorder(
@@ -123,23 +77,20 @@ class CadastroPageState extends State<CadastroPage> {
                       padding: EdgeInsets.fromLTRB(20, 8, 20, 20),
                       child: RaisedButton(
                           child: Text(
-                            "Cadastrar",
+                            "Finalizar",
                             style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                           color: Colors.yellow[800],
                           padding: EdgeInsets.fromLTRB(32, 10, 32, 10),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(32)),
-                          onPressed: () {Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ServicoPage()));}),
+                          onPressed: () {}),
                     ),
                   ],
                 ),
               ),
             ),
-          )),
-    );
+          )),    
+  );         
   }
 }

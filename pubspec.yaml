@@ -48,6 +48,9 @@ flutter:
   assets:
   - assets/images/Telefone.png
   - assets/images/fundo.jpg
+  - assets/images/Mapa.jpg
+  - assets/images/Cadastro.png
+  - assets/images/Cadastro1.png
   - assets/images/Login.png
   - assets/images/Logo.png
   - assets/images/Perfil.png

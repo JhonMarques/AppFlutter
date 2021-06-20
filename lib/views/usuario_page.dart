@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class UsuarioPage extends StatefulWidget {
@@ -25,21 +23,33 @@ class _UsuarioPageState extends State<UsuarioPage> {
         backgroundColor: Colors.verdeWhats,
       ),
       backgroundColor: Colors.lightGreen[100],
-      body: Center(
-        child: Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
-          ),
-          child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-            Image.asset(
-              'assets/images/Perfil.png',
-              width: 150,
-              height: 150,
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 10,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  height: MediaQuery.of(context).size.height/4,
+                  width: MediaQuery.of(context).size.height/4,
+                  decoration: BoxDecoration(
+                    color: Colors.white54,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [BoxShadow(
+                      color: Colors.black26, 
+                      blurRadius: 25.0,
+                      spreadRadius: 0.1,)]                  
+                      ),
+                      child: Image.asset("assets/images/Perfil.png",), 
+                ),
+              ],
             ),
-            
-            // Text(profissao)
-          ]),
-        ),
+          ),
+        ],
       ),
     );
   }
